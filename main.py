@@ -19,11 +19,24 @@ def load_user(id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(id)
 
+
 @app.route("/")
 def index():
     session = db_session.create_session()
     jobs = session.query(Jobs).all()
     return render_template("index.html", jobs=jobs)
+
+
+@app.route("/maths")
+def maths():
+    with open('templates/maths.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/physics')
+def physics():
+    with open('templates/physics.html', 'r', encoding='utf-8') as file:
+        return file.read()
 
 
 @app.route('/login', methods=['GET', 'POST'])
