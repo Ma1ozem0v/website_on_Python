@@ -39,6 +39,7 @@ def physics():
         return file.read()
 
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
