@@ -39,6 +39,23 @@ def physics():
         return file.read()
 
 
+@app.route('/physics/kinematika')
+def kinematika():
+    with open('templates/kinematika.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/physics/dinamika')
+def dinamika():
+    with open('templates/dinamika.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/physics/kolebania')
+def kolebania():
+    with open('templates/kolebania.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
