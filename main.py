@@ -108,13 +108,6 @@ def subjects():
     return render_template('subjects.html')
 
 
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect("/")
-
-
 def last_news(channel_name):
     tgurl = 'https://t.me/s/'
     url = tgurl + channel_name
@@ -130,8 +123,8 @@ def last_news(channel_name):
     return urls
 
 
-@app.route('/bot', methods=['POST', 'GET'])
-def main_page():
+@app.route('/news', methods=['POST', 'GET'])
+def news():
     url = 'free_edu/5073'
     if request.method == 'GET':
         return render_template('tgbot.html', url=url)
@@ -139,6 +132,18 @@ def main_page():
         channel_name = request.form['adress']
         urls = last_news(channel_name)
         return render_template('tgbot.html', urls=urls)
+
+
+@app.route('/api', methods=['GET', 'POST'])
+def api():
+    return render_template('api.html')
+
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect("/")
 
 
 def main():
