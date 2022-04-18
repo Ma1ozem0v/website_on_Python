@@ -6,3 +6,5 @@ sqlalchemy>=1.3
 sqlalchemy-serializer
 flask-restful
 bs4
+python-telegram-bot
+python-dotenv
