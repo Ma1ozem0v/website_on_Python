@@ -39,6 +39,36 @@ def algebra():
         return file.read()
 
 
+@app.route('/algebra/log')
+def log():
+    with open('templates/log.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/algebra/nerav')
+def nerav():
+    with open('templates/nerav.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/algebra/trigo')
+def trigo():
+    with open('templates/trigo.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/algebra/urav')
+def urav():
+    with open('templates/urav.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/algebra/funct')
+def funct():
+    with open('templates/funct.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
 @app.route('/physics')
 def physics():
     with open('templates/physics.html', 'r', encoding='utf-8') as file:
