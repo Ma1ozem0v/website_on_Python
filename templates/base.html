@@ -12,7 +12,9 @@
 <body>
 <header>
 <!--    <nav class="navbar navbar-light bg-secondary">-->
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <h1>General Education</h1>
+    </nav>
         {% if current_user.is_authenticated %}
         <a class="btn btn-success" href="/subjects">Предметы</a>
     <a class="navbar-brand" href="/logout">Выйти из учетной записи</a>
@@ -27,7 +29,7 @@
     </p>
 {% endif %}
     </nav>
-    <h1>Справочник по различным предметам</h1>
+    <h1>Справочник по школьным предметам</h1>
 </header>
 <!-- Begin page content -->
 <main role="main" class="container">
