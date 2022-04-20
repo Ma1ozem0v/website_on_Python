@@ -4,7 +4,7 @@ from data.users import User
 from data.jobs import Jobs
 import requests
 from bs4 import BeautifulSoup
-from data.forms import RegisterForm, LoginForm, WorksForm
+from data.forms import RegisterForm, LoginForm
 from flask_login import LoginManager, login_user, logout_user, login_required
 import os
 
@@ -33,6 +33,12 @@ def maths():
         return file.read()
 
 
+@app.route('/geometry')
+def geometry():
+    with open('templates/geometry.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
 @app.route('/algebra')
 def algebra():
     with open('templates/algebra.html', 'r', encoding='utf-8') as file:
@@ -42,6 +48,12 @@ def algebra():
 @app.route('/algebra/log')
 def log():
     with open('templates/log.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+@app.route('/geometry/ygli')
+def ygli():
+    with open('templates/ygli.html', 'r', encoding='utf-8') as file:
         return file.read()
 
 
@@ -72,6 +84,12 @@ def funct():
 @app.route('/physics')
 def physics():
     with open('templates/physics.html', 'r', encoding='utf-8') as file:
+        return file.read()
+
+
+app.route('/geometry/treugol')
+def treugol():
+    with open('templates/treugol.html', 'r', encoding='utf-8') as file:
         return file.read()
 
 
