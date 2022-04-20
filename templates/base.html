@@ -15,7 +15,8 @@
         <h1>General Education</h1>
         {% if current_user.is_authenticated %}
         <a class="btn btn-success" href="/subjects">Предметы</a>
-    <a class="navbar-brand" href="/logout">Выйти из учетной записи</a>
+        <h5> {{ current_user.name }} </h5>
+    <a class="navbar-brand" href="/logout">Выйти из аккаунта</a>
         {% else %}
     <p>
         <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
