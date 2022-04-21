@@ -88,8 +88,13 @@ def physics():
 
 
 app.route('/geometry/treugol')
-def treugol():
-    with open('templates/treugol.html', 'r', encoding='utf-8') as file:
+def treug():
+    return render_template('templates/treugol.html')
+
+
+@app.route('/geometry/priamie')
+def priamie():
+    with open('templates/priamie.html', 'r', encoding='utf-8') as file:
         return file.read()
 
 
