@@ -8,3 +8,4 @@ flask-restful
 bs4
 python-telegram-bot
 python-dotenv
+lxml
